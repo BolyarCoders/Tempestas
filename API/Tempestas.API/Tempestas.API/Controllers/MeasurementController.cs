@@ -39,7 +39,7 @@ namespace Tempestas.API.Controllers
                     Temperature = measurement.Temperature,
                     Humidity = measurement.Humidity,
                     AirQuality = measurement.AirQuality,
-                    MeasuredAt = measurement.MeasuredAt,
+                    MeasuredAt = measurement.MeasuredAt.DateTime,
                     Device = device
                 };
 
