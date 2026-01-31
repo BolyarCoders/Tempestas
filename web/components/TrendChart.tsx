@@ -1,40 +1,42 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 interface TrendChartProps {
-    data: number[];
+  data: number[];
 }
 
 export const TrendChart: React.FC<TrendChartProps> = ({ data }) => {
-    const maxVal = Math.max(...data);
+  const maxVal = Math.max(...data);
 
-    return (
-        <div className="bg-card rounded-2xl p-5 border border-white/5 shadow-sm">
-            <div className="flex justify-between items-end h-32 gap-2 md:gap-4">
-                {data.map((value, index) => {
-                    const height = (value / maxVal) * 100;
-                    const isGood = value <= 50;
+  return (
+    <div className="bg-card rounded-2xl border border-white/5 p-5 shadow-sm">
+      <div className="flex h-32 items-end justify-between gap-2 md:gap-4">
+        {data.map((value, index) => {
+          const height = (value / maxVal) * 100;
+          const isGood = value <= 50;
 
-                    return (
-                        <div key={index} className="flex flex-col items-center flex-1 h-full justify-end group">
-                            <span className="text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity mb-1">{value}</span>
+          return (
+            <div key={index} className="group flex h-full flex-1 flex-col items-center justify-end">
+              <span className="mb-1 text-[10px] text-white opacity-0 transition-opacity group-hover:opacity-100">
+                {value}
+              </span>
 
-                            <div className="w-full h-full flex items-end justify-center">
-                                <div
-                                    className={clsx(
-                                        "w-full max-w-[20px] rounded-t-sm transition-all duration-500 min-h-[4px]",
-                                        isGood ? "bg-status-good" : "bg-status-moderate"
-                                    )}
-                                    style={{ height: `${height}%` }}
-                                />
-                            </div>
+              <div className="flex h-full w-full items-end justify-center">
+                <div
+                  className={clsx(
+                    'min-h-[4px] w-full max-w-[20px] rounded-t-sm transition-all duration-500',
+                    isGood ? 'bg-status-good' : 'bg-status-moderate',
+                  )}
+                  style={{ height: `${height}%` }}
+                />
+              </div>
 
-                            <span className="text-[10px] text-text-secondary mt-2 font-medium">
-                                {8 + index * 2}:00
-                            </span>
-                        </div>
-                    );
-                })}
+              <span className="text-text-secondary mt-2 text-[10px] font-medium">
+                {8 + index * 2}:00
+              </span>
             </div>
-        </div>
-    );
+          );
+        })}
+      </div>
+    </div>
+  );
 };

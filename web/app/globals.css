@@ -1,28 +1,28 @@
-@import "tailwindcss";
-@plugin "daisyui";
+@import 'tailwindcss';
+@plugin 'daisyui';
 
 @theme {
-  --color-primary: #2563EB;
-  --color-accent: #22D3EE;
-  --color-background-app: #0F172A;
+  --color-primary: #2563eb;
+  --color-accent: #22d3ee;
+  --color-background-app: #0f172a;
   --color-card: #020617;
-  --color-status-good: #22C55E;
-  --color-status-moderate: #EAB308;
-  --color-status-unhealthy: #F97316;
-  --color-status-danger: #EF4444;
-  --color-text-primary: #F8FAFC;
-  --color-text-secondary: #94A3B8;
+  --color-status-good: #22c55e;
+  --color-status-moderate: #eab308;
+  --color-status-unhealthy: #f97316;
+  --color-status-danger: #ef4444;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
 }
 
 /* Custom Utilities for gradients and specific mobile styles if needed */
 @utility text-gradient {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-accent to-primary;
+  @apply from-accent to-primary bg-linear-to-r bg-clip-text text-transparent;
 }
 
 /* DaisyUI Config */
 :root {
-  --background: #0F172A;
-  --foreground: #F8FAFC;
+  --background: #0f172a;
+  --foreground: #f8fafc;
 }
 
 body {

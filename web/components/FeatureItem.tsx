@@ -1,16 +1,16 @@
-import { IoCheckmarkCircle } from "react-icons/io5";
+import { IoCheckmarkCircle } from 'react-icons/io5';
 
 interface FeatureItemProps {
-    text: string;
+  text: string;
 }
 
 export const FeatureItem: React.FC<FeatureItemProps> = ({ text }) => {
-    return (
-        <div className="flex flex-row items-center gap-3 w-full">
-            <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
-            <p className="text-text-primary font-medium text-sm md:text-base leading-tight md:leading-normal">
-                {text}
-            </p>
-        </div>
-    );
+  return (
+    <div className="flex w-full flex-row items-center gap-3">
+      <div className="bg-primary h-2 w-2 shrink-0 rounded-full" />
+      <p className="text-text-primary text-sm leading-tight font-medium md:text-base md:leading-normal">
+        {text}
+      </p>
+    </div>
+  );
 };
