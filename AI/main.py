@@ -6,7 +6,7 @@ from datetime import datetime
 from uuid import UUID, uuid4
 from fastapi.middleware.cors import CORSMiddleware
 
-# from model import get_gemini_prediction,
+from model import get_gemini_prediction
 from test_ollama_model import get_ollama_prediction
 
 app = FastAPI()
@@ -37,18 +37,18 @@ class PredictionResponse(BaseModel):
     confidence: float
 
 
-# @app.post("/predict", response_model=PredictionResponse)
-# async def predict_endpoint(request: PredictionRequest):
-#     # Pass the whole list of records to the AI
-#     prediction_data = get_gemini_prediction(request.device_id, request.records)
+@app.post("/predict", response_model=PredictionResponse)
+async def predict_endpoint(request: PredictionRequest):
+    # Pass the whole list of records to the AI
+    prediction_data = get_gemini_prediction(request.device_id, request.records)
 
-#     # Return as a structured response
-#     return PredictionResponse(
-#         id=uuid4(),
-#         device_id=request.device_id,
-#         generated_at=datetime.now(),
-#         **prediction_data  # Unpacks the dictionary from Gemini
-# )
+    # Return as a structured response
+    return PredictionResponse(
+        id=uuid4(),
+        device_id=request.device_id,
+        generated_at=datetime.now(),
+        **prediction_data  # Unpacks the dictionary from Gemini
+    )
 
 
 @app.post("/predict_ollama", response_model=PredictionResponse)
