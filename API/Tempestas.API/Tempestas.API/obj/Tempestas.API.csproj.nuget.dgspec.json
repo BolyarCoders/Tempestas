@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj": {}
+    "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj": {}
   },
   "projects": {
-    "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj": {
+    "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj",
+        "projectUniqueName": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj",
         "projectName": "Tempestas.API",
-        "projectPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\obj\\",
+        "projectPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Tempestas.API.csproj",
+        "packagesPath": "C:\\Users\\merte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj": {
-                "projectPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj"
+              "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj": {
+                "projectPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj"
               },
-              "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj": {
-                "projectPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj"
+              "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj": {
+                "projectPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj"
               }
             }
           }
@@ -101,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -519,20 +519,20 @@
         }
       }
     },
-    "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj": {
+    "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj",
+        "projectUniqueName": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj",
         "projectName": "Tempestas.MainData",
-        "projectPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\obj\\",
+        "projectPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj",
+        "packagesPath": "C:\\Users\\merte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -602,7 +602,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -880,20 +880,20 @@
         }
       }
     },
-    "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj": {
+    "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj",
+        "projectUniqueName": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj",
         "projectName": "Tempestas.Services.Core",
-        "projectPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\obj\\",
+        "projectPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Tempestas.Services.Core.csproj",
+        "packagesPath": "C:\\Users\\merte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -907,7 +907,11 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj": {
+                "projectPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Tempestas.MainData.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -941,7 +945,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

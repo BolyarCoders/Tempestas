@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Tempestas.MainData;
@@ -7,24 +8,25 @@ using Tempestas.Services.Core.Interfaces;
 
 namespace Tempestas.Services.Core.Services
 {
-    public class DeviceService : IDeviceService
+    public class MeasurementService : IMeasurementService
     {
         private readonly TempestasDbContext _context;
-        public DeviceService(TempestasDbContext context)
+
+        public MeasurementService(TempestasDbContext context)
         {
             _context = context;
         }
-        public async Task<bool> AddDeviceAsync(Device? device)
+        public async Task<bool> AddMeasurementAsync(Measurement? measurement)
         {
             try
             {
-                if (device == null)
+                if(measurement == null)
                 {
                     return false;
                 }
                 else
                 {
-                    await _context.Devices.AddAsync(device);
+                    await _context.Measurements.AddAsync(measurement);
                     await _context.SaveChangesAsync();
                     return true;
                 }
@@ -33,28 +35,21 @@ namespace Tempestas.Services.Core.Services
             {
                 return false;
             }
-
         }
 
-        public async Task<Device?> GetDeviceInfoAsync(string? DeviceId)
+        public async Task<Measurement?> GetLatestMeasurementAsync(Guid measurementId)
         {
             try
             {
-                if (string.IsNullOrEmpty(DeviceId))
-                {
-                    return null!;
-                }
-                else
-                {
-                    var device = await _context.Devices.FindAsync(Guid.Parse(DeviceId));
-                    return device;
-                }
+                var measurement = await _context.Measurements
+                    .OrderByDescending(x => x.MeasuredAt)
+                    .FirstOrDefaultAsync();
+                return measurement;
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("An error occurred while getting the prediction for the device.", ex);
+                throw new ApplicationException("An error occurred while retrieving the measurement.", ex);
             }
-
         }
     }
 }

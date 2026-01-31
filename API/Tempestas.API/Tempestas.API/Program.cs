@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Tempestas.MainData;
+using Tempestas.Services.Core;
+using Tempestas.Services.Core.Interfaces;
+using Tempestas.Services.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,11 @@ builder.Services.AddDbContext<TempestasDbContext>(options =>
     options.UseNpgsql(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
+
+
+builder.Services.AddScoped<IMeasurementService, MeasurementService>();
+builder.Services.AddScoped<IDeviceService, DeviceService>();
+builder.Services.AddScoped<IPredictionService, PredictionService>();
 
 var app = builder.Build();
 

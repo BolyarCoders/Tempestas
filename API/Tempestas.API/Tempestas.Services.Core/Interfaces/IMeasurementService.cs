@@ -5,8 +5,8 @@ using Tempestas.MainData.Models;
 
 namespace Tempestas.Services.Core.Interfaces
 {
-    public interface IPredictionService
+    public interface IMeasurementService
     {
-        public Task<string> GetPredictionForDeviceAsync(string deviceId);
+        public Task<bool> AddMeasurementAsync(Measurement? measurement);
     }
 }
