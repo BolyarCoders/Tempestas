@@ -12,13 +12,15 @@ namespace Tempestas.MainData
         {
         }
 
-        public DbSet<Models.Device> Devices { get; set; } = null!;
+        public DbSet<Device> Devices { get; set; } = null!;
+        public DbSet<Measurement> Measurements { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             ConfigureDefaults(modelBuilder);
+            ConfigureIndexes(modelBuilder);
         }
 
         private static void ConfigureDefaults(ModelBuilder modelBuilder)
@@ -30,6 +32,16 @@ namespace Tempestas.MainData
             modelBuilder.Entity<Device>()
                 .Property(d => d.CreatedAt)
                 .HasDefaultValueSql("now()");
+
+            modelBuilder.Entity<Measurement>()
+                .Property(m => m.Id)
+                .HasDefaultValueSql("gen_random_uuid()");
+        }
+
+        private static void ConfigureIndexes(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Measurement>()
+                .HasIndex(m => new { m.DeviceId, m.MeasuredAt });
         }
     }
 }
