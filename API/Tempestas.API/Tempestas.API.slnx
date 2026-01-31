@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Tempestas.API/Tempestas.API.csproj" />
+  <Project Path="Tempestas.MainData/Tempestas.MainData.csproj" Id="fc2a3033-9b43-4678-9ef4-847b3583b82f" />
   <Project Path="Tempestas.Services.Core/Tempestas.Services.Core.csproj" Id="2ad85778-0efb-41e9-a3fb-b9e3e09753cf" />
 </Solution>
