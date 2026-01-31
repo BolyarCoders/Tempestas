@@ -13,3 +13,18 @@ D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug
 D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.pdb
 D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.genruntimeconfig.cache
 D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\ref\Tempestas.MainData.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\bin\Debug\net10.0\Tempestas.MainData.deps.json
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\bin\Debug\net10.0\Tempestas.MainData.runtimeconfig.json
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\bin\Debug\net10.0\Tempestas.MainData.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\bin\Debug\net10.0\Tempestas.MainData.pdb
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.csproj.AssemblyReference.cache
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.AssemblyInfoInputs.cache
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.AssemblyInfo.cs
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.csproj.CoreCompileInputs.cache
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.sourcelink.json
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\refint\Tempestas.MainData.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.pdb
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\Tempestas.MainData.genruntimeconfig.cache
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.MainData\obj\Debug\net10.0\ref\Tempestas.MainData.dll

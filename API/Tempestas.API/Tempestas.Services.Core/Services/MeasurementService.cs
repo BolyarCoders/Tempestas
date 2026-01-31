@@ -37,7 +37,7 @@ namespace Tempestas.Services.Core.Services
             }
         }
 
-        public async Task<Measurement?> GetLatestMeasurementAsync(Guid measurementId)
+        public async Task<Measurement?> GetLatestMeasurementAsync()
         {
             try
             {

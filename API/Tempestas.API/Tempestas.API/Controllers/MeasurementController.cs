@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Tempestas.API.Controllers.IControllers;
 using Tempestas.MainData.Models;
-using Tempestas.Services.Core.Services;
+using Tempestas.Services.Core.Interfaces;
 
 namespace Tempestas.API.Controllers
 {
@@ -9,16 +9,17 @@ namespace Tempestas.API.Controllers
     [Route("api/measurements")]  // "api/measurements" (explicit and plural)
     public class MeasurementController : ControllerBase, IMeasurementController
     {
-        private readonly MeasurementService _measurementService;
+        private readonly IMeasurementService _measurementService;
+        private readonly IDeviceService _deviceService;
 
-        public MeasurementController(MeasurementService measurementService)
+        public MeasurementController(IMeasurementService measurementService, IDeviceService deviceService)
         {
             _measurementService = measurementService;
+            _deviceService = deviceService;
         }
 
-        // POST: api/measurements
         [HttpPost]
-        public async Task<IActionResult> AddMeasurementAsync([FromBody] Measurement? measurement)
+        public async Task<IActionResult> AddMeasurementAsync([FromBody] MeasurementDTO? measurement)
         {
             try
             {
@@ -26,8 +27,23 @@ namespace Tempestas.API.Controllers
                 {
                     return BadRequest(new { error = "Measurement cannot be null" });
                 }
+                Device? device = await _deviceService.GetDeviceInfoAsync(measurement.DeviceId.ToString());
+                if (device == null)
+                {
+                    return BadRequest(new { error = "The device id references unknown device" });
+                }
+                Measurement measurement1 = new Measurement
+                {
+                    Id = measurement.Id,
+                    DeviceId = measurement.DeviceId,
+                    Temperature = measurement.Temperature,
+                    Humidity = measurement.Humidity,
+                    AirQuality = measurement.AirQuality,
+                    MeasuredAt = measurement.MeasuredAt,
+                    Device = device
+                };
 
-                bool result = await _measurementService.AddMeasurementAsync(measurement);
+                bool result = await _measurementService.AddMeasurementAsync(measurement1);
 
                 if (result)
                 {
@@ -44,23 +60,12 @@ namespace Tempestas.API.Controllers
             }
         }
 
-        // GET: api/measurements/{measurementId}
-        [HttpGet("{measurementId}")]
-        public async Task<IActionResult> GetLatestMeasurementAsync(string? measurementId)
+        [HttpGet("/getLast")]
+        public async Task<IActionResult > GetLatestMeasurementAsync()
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(measurementId))
-                {
-                    return BadRequest(new { error = "MeasurementId cannot be null or empty" });
-                }
-
-                if (!Guid.TryParse(measurementId, out Guid id))
-                {
-                    return BadRequest(new { error = "Invalid measurement ID format" });
-                }
-
-                var result = await _measurementService.GetLatestMeasurementAsync(id);
+                var result = await _measurementService.GetLatestMeasurementAsync();
 
                 return result != null ? Ok(result) : NotFound(new { error = "Measurement not found" });
             }

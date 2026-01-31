@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Tempestas.MainData.Models;
-using Tempestas.Services.Core.Services;
+using Tempestas.Services.Core.Interfaces;
 
 namespace Tempestas.API.Controllers
 {
     [Route("api/[controller]")]
     public class DeviceController : Controller, IControllers.IDeviceController
     {
-        private readonly DeviceService _deviceService;  
-        public DeviceController(DeviceService deviceService)
+        private readonly IDeviceService _deviceService;  
+        public DeviceController(IDeviceService deviceService)
         {
             _deviceService = deviceService;
         }

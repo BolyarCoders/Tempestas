@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Tempestas.MainData.Models
 {
@@ -17,7 +18,8 @@ namespace Tempestas.MainData.Models
         public Guid DeviceId { get; set; }
 
         [ForeignKey(nameof(DeviceId))]
-        public Device Device { get; set; } = null!;
+        [JsonIgnore]
+        public Device Device { get; set; }
 
         [Column("temperature")]
         public double Temperature { get; set; }

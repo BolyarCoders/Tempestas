@@ -10,3 +10,19 @@ D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\
 D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\refint\Tempestas.Services.Core.dll
 D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.pdb
 D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\ref\Tempestas.Services.Core.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.Services.Core.deps.json
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.Services.Core.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.Services.Core.pdb
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.MainData.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.MainData.pdb
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.csproj.AssemblyReference.cache
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.AssemblyInfoInputs.cache
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.AssemblyInfo.cs
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.csproj.CoreCompileInputs.cache
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.sourcelink.json
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempesta.05090766.Up2Date
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\refint\Tempestas.Services.Core.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.pdb
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\ref\Tempestas.Services.Core.dll

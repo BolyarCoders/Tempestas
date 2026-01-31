@@ -7,6 +7,7 @@ namespace Tempestas.Services.Core.Interfaces
 {
     public interface IMeasurementService
     {
+        public Task<Measurement?> GetLatestMeasurementAsync();
         public Task<bool> AddMeasurementAsync(Measurement? measurement);
     }
 }
