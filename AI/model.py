@@ -1,6 +1,8 @@
 import os
 import json
-import google.generativeai as genai
+
+import google.genai as genai
+
 from datetime import datetime, timedelta
 
 genai.configure(api_key=os.getenv("GEMINI_KEY"))

@@ -1,9 +1,13 @@
+import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 from datetime import datetime
 from uuid import UUID, uuid4
-from AI.model import get_gemini_prediction
+from fastapi.middleware.cors import CORSMiddleware
+
+# from model import get_gemini_prediction,
+from test_ollama_model import get_ollama_prediction
 
 app = FastAPI()
 
@@ -17,6 +21,7 @@ class SensorRecord(BaseModel):
 
 
 class PredictionRequest(BaseModel):
+    device_id: UUID
     records: List[SensorRecord]
 
 
@@ -32,19 +37,41 @@ class PredictionResponse(BaseModel):
     confidence: float
 
 
-@app.post("/predict", response_model=PredictionResponse)
+# @app.post("/predict", response_model=PredictionResponse)
+# async def predict_endpoint(request: PredictionRequest):
+#     # Pass the whole list of records to the AI
+#     prediction_data = get_gemini_prediction(request.device_id, request.records)
+
+#     # Return as a structured response
+#     return PredictionResponse(
+#         id=uuid4(),
+#         device_id=request.device_id,
+#         generated_at=datetime.now(),
+#         **prediction_data  # Unpacks the dictionary from Gemini
+# )
+
+
+@app.post("/predict_ollama", response_model=PredictionResponse)
 async def predict_endpoint(request: PredictionRequest):
-    # Pass the whole list of records to the AI
-    prediction_data = get_gemini_prediction(request.device_id, request.records)
+    # If Pydantic reached here, 'request' is already a proper object.
+    # The error you saw happens BEFORE this function runs.
 
-    # Return as a structured response
-    return PredictionResponse(
-        id=uuid4(),
-        device_id=request.device_id,
-        generated_at=datetime.now(),
-        **prediction_data  # Unpacks the dictionary from Gemini
-    )
+    try:
+        prediction_data = get_ollama_prediction(request.device_id, request.records)
 
+        return PredictionResponse(
+            id=uuid4(),
+            device_id=request.device_id,
+            generated_at=datetime.now(),
+            **prediction_data
+        )
+    except Exception as e:
+        # This catches errors inside the AI logic
+        return {"error": str(e)}
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 """
 public class Prediction
