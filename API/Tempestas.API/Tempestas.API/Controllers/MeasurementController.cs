@@ -54,7 +54,7 @@ namespace Tempestas.API.Controllers
                     return StatusCode(500, new { error = "Failed to add measurement" });
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return StatusCode(500, new { error = "An error occurred while adding the measurement" });
             }
@@ -79,7 +79,7 @@ namespace Tempestas.API.Controllers
 
                 return result != null ? Ok(result) : NotFound(new { error = "Measurement not found" });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return StatusCode(500, new { error = "An error occurred while retrieving the measurement" });
             }
