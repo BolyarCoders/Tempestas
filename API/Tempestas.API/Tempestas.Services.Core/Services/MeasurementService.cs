@@ -37,11 +37,12 @@ namespace Tempestas.Services.Core.Services
             }
         }
 
-        public async Task<Measurement?> GetLatestMeasurementAsync()
+        public async Task<Measurement?> GetLatestMeasurementAsync(string id)
         {
             try
             {
                 var measurement = await _context.Measurements
+                    .Where(x => x.DeviceId.ToString() == id)
                     .OrderByDescending(x => x.MeasuredAt)
                     .FirstOrDefaultAsync();
                 return measurement;

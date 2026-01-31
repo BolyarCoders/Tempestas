@@ -60,12 +60,22 @@ namespace Tempestas.API.Controllers
             }
         }
 
-        [HttpGet("/getLast")]
-        public async Task<IActionResult > GetLatestMeasurementAsync()
+        [HttpGet("{measurementId}")]
+        public async Task<IActionResult> GetLatestMeasurementAsync(string? measurementId)
         {
             try
             {
-                var result = await _measurementService.GetLatestMeasurementAsync();
+                if (string.IsNullOrWhiteSpace(measurementId))
+                {
+                    return BadRequest(new { error = "MeasurementId cannot be null or empty" });
+                }
+
+                if (!Guid.TryParse(measurementId, out Guid id))
+                {
+                    return BadRequest(new { error = "Invalid measurement ID format" });
+                }
+
+                var result = await _measurementService.GetLatestMeasurementAsync(id.ToString());
 
                 return result != null ? Ok(result) : NotFound(new { error = "Measurement not found" });
             }

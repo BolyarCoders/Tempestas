@@ -46,7 +46,7 @@ namespace Tempestas.Services.Core.Services
                 }
                 else
                 {
-                    var device = await _context.Devices.FindAsync(Guid.Parse(DeviceId));
+                    Device? device = await _context.Devices.FindAsync(Guid.Parse(DeviceId));
                     return device;
                 }
             }
