@@ -1,0 +1,6 @@
+@Tempestas.API_HostAddress = http://localhost:5278
+
+GET {{Tempestas.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
