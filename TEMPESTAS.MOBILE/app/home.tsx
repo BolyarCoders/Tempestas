@@ -1,9 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
+  ActivityIndicator,
   Dimensions,
+  RefreshControl,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -11,6 +13,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { useDeviceMeasurements } from "../hooks/useDeviceMesurments";
 
 const { width } = Dimensions.get("window");
 
@@ -68,13 +71,23 @@ const getAQIStatus = (aqi: number): AQIStatus => {
 };
 
 const HomeScreen: React.FC = () => {
-  // Mock data - in real app, this would come from API/sensors
-  const [currentAQI] = useState(45);
-  const [temperature] = useState(22.5);
-  const [humidity] = useState(65);
+  const router = useRouter();
+  const { getMeasurementByDeviceId, measurement, loading, error } =
+    useDeviceMeasurements();
+
+  // State for current data
+  const [currentAQI, setCurrentAQI] = useState(45);
+  const [temperature, setTemperature] = useState(22.5);
+  const [humidity, setHumidity] = useState(65);
+  const [refreshing, setRefreshing] = useState(false);
+
+  // Use the hardcoded device ID
+  const DEVICE_ID = "21c22fce-d945-48cc-a5cd-4a0b4897d160";
+
+  // Mock data for features not yet implemented
   const [pm25] = useState(12.3);
   const [pm10] = useState(28.7);
-  const router = useRouter();
+
   const aqiStatus = getAQIStatus(currentAQI);
 
   // Mock historical data for trends
@@ -84,6 +97,37 @@ const HomeScreen: React.FC = () => {
     { time: "4 PM", aqi: 72, level: "Moderate" },
     { time: "6 PM", aqi: 85, level: "Moderate" },
   ];
+
+  // Fetch measurement data on component mount
+  useEffect(() => {
+    loadMeasurement();
+  }, []);
+
+  // Update state when measurement data is fetched
+  useEffect(() => {
+    if (measurement) {
+      console.log("📊 Updating UI with measurement data:", measurement);
+      setTemperature(measurement.temperature);
+      setHumidity(measurement.humidity);
+      setCurrentAQI(measurement.airQuality);
+    }
+  }, [measurement]);
+
+  const loadMeasurement = async () => {
+    try {
+      console.log("🔄 Loading latest measurement for device...");
+      await getMeasurementByDeviceId(DEVICE_ID);
+    } catch (err) {
+      console.error("❌ Failed to load measurement:", err);
+      // Keep using mock data if API fails
+    }
+  };
+
+  const onRefresh = async () => {
+    setRefreshing(true);
+    await loadMeasurement();
+    setRefreshing(false);
+  };
 
   return (
     <View style={styles.container}>
@@ -95,7 +139,12 @@ const HomeScreen: React.FC = () => {
           <Text style={styles.headerTitle}>Tempestas</Text>
           <Text style={styles.headerSubtitle}>Sofia, Bulgaria</Text>
         </View>
-        <TouchableOpacity style={styles.settingsButton}>
+        <TouchableOpacity
+          onPress={() => {
+            router.push("/settings");
+          }}
+          style={styles.settingsButton}
+        >
           <Ionicons
             name="settings-outline"
             size={24}
@@ -108,7 +157,42 @@ const HomeScreen: React.FC = () => {
         style={styles.scrollView}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={COLORS.accent}
+            colors={[COLORS.accent]}
+          />
+        }
       >
+        {/* Loading State */}
+        {loading && !measurement && (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color={COLORS.accent} />
+            <Text style={styles.loadingText}>Loading data...</Text>
+          </View>
+        )}
+
+        {/* Error State */}
+        {error && !measurement && (
+          <View style={styles.errorContainer}>
+            <Ionicons
+              name="alert-circle"
+              size={48}
+              color={COLORS.statusDanger}
+            />
+            <Text style={styles.errorTitle}>Unable to load data</Text>
+            <Text style={styles.errorText}>{error}</Text>
+            <TouchableOpacity
+              style={styles.retryButton}
+              onPress={loadMeasurement}
+            >
+              <Text style={styles.retryButtonText}>Retry</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
         {/* Main AQI Card */}
         <LinearGradient
           colors={[COLORS.primary, COLORS.accent]}
@@ -127,6 +211,14 @@ const HomeScreen: React.FC = () => {
           </View>
 
           <Text style={styles.aqiDescription}>{aqiStatus.description}</Text>
+
+          {/* Data source indicator */}
+          {measurement && (
+            <View style={styles.dataSourceBadge}>
+              <Ionicons name="checkmark-circle" size={14} color="#FFFFFF" />
+              <Text style={styles.dataSourceText}>Live Data</Text>
+            </View>
+          )}
 
           {/* Color indicator bar */}
           <View style={styles.colorIndicator}>
@@ -160,6 +252,21 @@ const HomeScreen: React.FC = () => {
         {/* Environmental Readings */}
         <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Current Conditions</Text>
+          {measurement && (
+            <View style={styles.timestampContainer}>
+              <Ionicons
+                name="time-outline"
+                size={14}
+                color={COLORS.textSecondary}
+              />
+              <Text style={styles.timestampText}>
+                {new Date(measurement.measuredAt).toLocaleTimeString("en-US", {
+                  hour: "numeric",
+                  minute: "2-digit",
+                })}
+              </Text>
+            </View>
+          )}
         </View>
 
         <View style={styles.readingsGrid}>
@@ -169,13 +276,13 @@ const HomeScreen: React.FC = () => {
               size={28}
               color={COLORS.accent}
             />
-            <Text style={styles.readingValue}>{temperature}°C</Text>
+            <Text style={styles.readingValue}>{temperature.toFixed(1)}°C</Text>
             <Text style={styles.readingLabel}>Temperature</Text>
           </View>
 
           <View style={styles.readingCard}>
             <Ionicons name="water-outline" size={28} color={COLORS.accent} />
-            <Text style={styles.readingValue}>{humidity}%</Text>
+            <Text style={styles.readingValue}>{humidity.toFixed(0)}%</Text>
             <Text style={styles.readingLabel}>Humidity</Text>
           </View>
 
@@ -338,6 +445,49 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingHorizontal: 20,
   },
+  loadingContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 60,
+  },
+  loadingText: {
+    marginTop: 16,
+    fontSize: 16,
+    color: COLORS.textSecondary,
+  },
+  errorContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 40,
+    paddingHorizontal: 20,
+    backgroundColor: COLORS.card,
+    borderRadius: 16,
+    marginBottom: 24,
+  },
+  errorTitle: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: COLORS.textPrimary,
+    marginTop: 16,
+    marginBottom: 8,
+  },
+  errorText: {
+    fontSize: 14,
+    color: COLORS.textSecondary,
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  retryButton: {
+    backgroundColor: COLORS.primary,
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+  },
+  retryButtonText: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#FFFFFF",
+  },
   mainCard: {
     borderRadius: 24,
     padding: 28,
@@ -383,6 +533,22 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     opacity: 0.9,
   },
+  dataSourceBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+    marginBottom: 12,
+  },
+  dataSourceText: {
+    fontSize: 11,
+    color: "#FFFFFF",
+    marginLeft: 4,
+    fontWeight: "600",
+  },
   colorIndicator: {
     flexDirection: "row",
     height: 6,
@@ -403,6 +569,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "700",
     color: COLORS.textPrimary,
+  },
+  timestampContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+  },
+  timestampText: {
+    fontSize: 12,
+    color: COLORS.textSecondary,
   },
   viewAllText: {
     fontSize: 14,
