@@ -4,4 +4,5 @@
     <Project Path="Tempestas.Data/Tempestas.Data.csproj" Id="ed267f11-013f-4d72-935b-60c2b0e46551" />
   </Folder>
   <Project Path="Tempestas.API/Tempestas.API.csproj" />
+  <Project Path="Tempestas.Services.Core/Tempestas.Services.Core.csproj" Id="2ad85778-0efb-41e9-a3fb-b9e3e09753cf" />
 </Solution>
