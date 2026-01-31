@@ -23,5 +23,6 @@ namespace Tempestas.MainData.Models
 
         // Navigation
         public ICollection<Measurement> Measurements { get; set; } = new List<Measurement>();
+        public ICollection<Prediction> Predictions { get; set; } = new List<Prediction>();
     }
 }

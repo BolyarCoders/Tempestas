@@ -11,8 +11,16 @@
       "RelativeMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|solutionrelative:tempestas.maindata\\models\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.maindata\\models\\prediction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|solutionrelative:tempestas.maindata\\models\\prediction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.maindata\\models\\measurement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|solutionrelative:tempestas.maindata\\models\\measurement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131143416_AddMeasurementsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tempestas.MainData\\Migrations\\20260131143416_AddMeasurementsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,11 +86,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Prediction.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Models\\Prediction.cs",
+              "RelativeDocumentMoniker": "Tempestas.MainData\\Models\\Prediction.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Models\\Prediction.cs",
+              "RelativeToolTip": "Tempestas.MainData\\Models\\Prediction.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:36:03.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260131143416_AddMeasurementsTable.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131143416_AddMeasurementsTable.cs",
+              "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131143416_AddMeasurementsTable.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131143416_AddMeasurementsTable.cs",
+              "RelativeToolTip": "Tempestas.MainData\\Migrations\\20260131143416_AddMeasurementsTable.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:34:16.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Measurement.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Models\\Measurement.cs",
               "RelativeDocumentMoniker": "Tempestas.MainData\\Models\\Measurement.cs",
@@ -95,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "20260131142458_AddDevicesTable.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs",
               "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs",
@@ -108,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "20260131142121_DeleteDB.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs",
               "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs",
@@ -121,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "20260131142027_DeleteDB.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs",
               "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs",
@@ -134,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\appsettings.json",
               "RelativeDocumentMoniker": "Tempestas.API\\appsettings.json",
@@ -147,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "20260131141834_Initial.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131141834_Initial.cs",
               "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131141834_Initial.cs",
@@ -160,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Program.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Program.cs",
@@ -179,7 +213,7 @@
               "RelativeDocumentMoniker": "Tempestas.MainData\\Models\\Device.cs",
               "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Models\\Device.cs",
               "RelativeToolTip": "Tempestas.MainData\\Models\\Device.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-31T14:11:50.255Z",
               "EditorCaption": ""
@@ -192,14 +226,14 @@
               "RelativeDocumentMoniker": "Tempestas.MainData\\TempestasDbContext.cs",
               "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\TempestasDbContext.cs",
               "RelativeToolTip": "Tempestas.MainData\\TempestasDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAowCgAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwDIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-31T14:03:52.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PredictionController.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\PredictionController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\PredictionController.cs",
@@ -212,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "DeviceController.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\DeviceController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\DeviceController.cs",
@@ -225,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "IPredictionController.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
@@ -238,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "IDeviceController.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
@@ -251,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "PredictionService.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\PredictionService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Services\\PredictionService.cs",
@@ -264,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "DeviceService.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\DeviceService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Services\\DeviceService.cs",
@@ -277,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "IPredictionService.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
@@ -290,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "IDeviceService.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",

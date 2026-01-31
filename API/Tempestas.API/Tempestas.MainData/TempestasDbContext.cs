@@ -14,6 +14,7 @@ namespace Tempestas.MainData
 
         public DbSet<Device> Devices { get; set; } = null!;
         public DbSet<Measurement> Measurements { get; set; } = null!;
+        public DbSet<Prediction> Predictions { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,12 +37,23 @@ namespace Tempestas.MainData
             modelBuilder.Entity<Measurement>()
                 .Property(m => m.Id)
                 .HasDefaultValueSql("gen_random_uuid()");
+
+            modelBuilder.Entity<Prediction>()
+                .Property(p => p.Id)
+                .HasDefaultValueSql("gen_random_uuid()");
+
+            modelBuilder.Entity<Prediction>()
+                .Property(p => p.GeneratedAt)
+                .HasDefaultValueSql("now()");
         }
 
         private static void ConfigureIndexes(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Measurement>()
                 .HasIndex(m => new { m.DeviceId, m.MeasuredAt });
+
+            modelBuilder.Entity<Prediction>()
+                .HasIndex(p => new { p.DeviceId, p.PredictedFor });
         }
     }
 }
