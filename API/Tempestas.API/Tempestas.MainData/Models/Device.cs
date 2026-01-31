@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Tempestas.MainData.Models
 {
@@ -23,6 +24,7 @@ namespace Tempestas.MainData.Models
 
         // Navigation
         public ICollection<Measurement> Measurements { get; set; } = new List<Measurement>();
+        
         public ICollection<Prediction> Predictions { get; set; } = new List<Prediction>();
     }
 }

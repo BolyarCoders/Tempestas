@@ -31,6 +31,6 @@ namespace Tempestas.MainData.Models
         public double AirQuality { get; set; }
 
         [Column("measured_at", TypeName = "timestamptz")]
-        public DateTimeOffset MeasuredAt { get; set; }
+        public DateTime MeasuredAt { get; set; }
     }
 }
