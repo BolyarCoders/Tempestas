@@ -1,41 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\",
+  "WorkspaceRootPath": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.maindata\\tempestasdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.maindata\\tempestasdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|solutionrelative:tempestas.maindata\\tempestasdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.maindata\\models\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC2A3033-9B43-4678-9EF4-847B3583B82F}|Tempestas.MainData\\Tempestas.MainData.csproj|solutionrelative:tempestas.maindata\\models\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131141834_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tempestas.MainData\\Migrations\\20260131141834_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\icontrollers\\idevicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\icontrollers\\idevicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\controllers\\icontrollers\\idevicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\icontrollers\\ipredictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\icontrollers\\ipredictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\controllers\\icontrollers\\ipredictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.services.core\\services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.services.core\\services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|solutionrelative:tempestas.services.core\\services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.services.core\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.services.core\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|solutionrelative:tempestas.services.core\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.services.core\\interfaces\\ipredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.services.core\\interfaces\\ipredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|solutionrelative:tempestas.services.core\\interfaces\\ipredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.services.core\\interfaces\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.services.core\\interfaces\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AD85778-0EFB-41E9-A3FB-B9E3E09753CF}|Tempestas.Services.Core\\Tempestas.Services.Core.csproj|solutionrelative:tempestas.services.core\\interfaces\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,28 +74,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260131142458_AddDevicesTable.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs",
+              "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs",
+              "RelativeToolTip": "Tempestas.MainData\\Migrations\\20260131142458_AddDevicesTable.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:24:59.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260131142121_DeleteDB.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs",
+              "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs",
+              "RelativeToolTip": "Tempestas.MainData\\Migrations\\20260131142121_DeleteDB.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:21:21.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260131142027_DeleteDB.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs",
+              "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs",
+              "RelativeToolTip": "Tempestas.MainData\\Migrations\\20260131142027_DeleteDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:20:27.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Tempestas.API\\appsettings.json",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\appsettings.json",
+              "RelativeToolTip": "Tempestas.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-31T14:18:55.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20260131141834_Initial.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131141834_Initial.cs",
+              "RelativeDocumentMoniker": "Tempestas.MainData\\Migrations\\20260131141834_Initial.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131141834_Initial.cs",
+              "RelativeToolTip": "Tempestas.MainData\\Migrations\\20260131141834_Initial.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:18:34.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Program.cs",
+              "RelativeDocumentMoniker": "Tempestas.API\\Program.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Program.cs",
+              "RelativeToolTip": "Tempestas.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:14:31.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Device.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Models\\Device.cs",
+              "RelativeDocumentMoniker": "Tempestas.MainData\\Models\\Device.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Models\\Device.cs",
+              "RelativeToolTip": "Tempestas.MainData\\Models\\Device.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:11:50.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TempestasDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\TempestasDbContext.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\TempestasDbContext.cs",
               "RelativeDocumentMoniker": "Tempestas.MainData\\TempestasDbContext.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\TempestasDbContext.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\TempestasDbContext.cs",
               "RelativeToolTip": "Tempestas.MainData\\TempestasDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAYwA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-31T14:03:52.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "PredictionController.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\PredictionController.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\PredictionController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\PredictionController.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\PredictionController.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\PredictionController.cs",
               "RelativeToolTip": "Tempestas.API\\Controllers\\PredictionController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -76,11 +195,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "DeviceController.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\DeviceController.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\DeviceController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\DeviceController.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\DeviceController.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\DeviceController.cs",
               "RelativeToolTip": "Tempestas.API\\Controllers\\DeviceController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -89,11 +208,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "IPredictionController.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
               "RelativeToolTip": "Tempestas.API\\Controllers\\IControllers\\IPredictionController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -102,11 +221,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "IDeviceController.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
               "RelativeDocumentMoniker": "Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
               "RelativeToolTip": "Tempestas.API\\Controllers\\IControllers\\IDeviceController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -115,11 +234,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "PredictionService.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\PredictionService.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\PredictionService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Services\\PredictionService.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\PredictionService.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\PredictionService.cs",
               "RelativeToolTip": "Tempestas.Services.Core\\Services\\PredictionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -128,11 +247,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "DeviceService.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\DeviceService.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\DeviceService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Services\\DeviceService.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\DeviceService.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Services\\DeviceService.cs",
               "RelativeToolTip": "Tempestas.Services.Core\\Services\\DeviceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -141,11 +260,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "IPredictionService.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
               "RelativeToolTip": "Tempestas.Services.Core\\Interfaces\\IPredictionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -154,11 +273,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "IDeviceService.cs",
-              "DocumentMoniker": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",
+              "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",
               "RelativeDocumentMoniker": "Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",
-              "ToolTip": "C:\\Users\\merte\\Documents\\GitHub\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",
+              "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",
               "RelativeToolTip": "Tempestas.Services.Core\\Interfaces\\IDeviceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

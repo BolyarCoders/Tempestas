@@ -1,0 +1,12 @@
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.Services.Core.deps.json
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.Services.Core.dll
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\bin\Debug\net10.0\Tempestas.Services.Core.pdb
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.AssemblyInfoInputs.cache
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.AssemblyInfo.cs
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.csproj.CoreCompileInputs.cache
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.sourcelink.json
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.dll
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\refint\Tempestas.Services.Core.dll
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\Tempestas.Services.Core.pdb
+D:\Programming projects\Tempestas\API\Tempestas.API\Tempestas.Services.Core\obj\Debug\net10.0\ref\Tempestas.Services.Core.dll
