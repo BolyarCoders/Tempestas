@@ -4,7 +4,6 @@
   "Documents": [
     {
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.api\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -40,8 +39,6 @@
       "AbsoluteMoniker": "D:0:0:{ED267F11-013F-4D72-935B-60C2B0E46551}|Tempestas.Data\\Tempestas.Data.csproj|c:\\users\\merte\\documents\\github\\tempestas\\api\\tempestas.api\\tempestas.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED267F11-013F-4D72-935B-60C2B0E46551}|Tempestas.Data\\Tempestas.Data.csproj|solutionrelative:tempestas.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 =======
-=======
->>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{6C79C0BD-B093-4130-86DF-3F06F8F3C766}|Tempestas.MainData\\Tempestas.MainData.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.maindata\\data\\tempestasdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C79C0BD-B093-4130-86DF-3F06F8F3C766}|Tempestas.MainData\\Tempestas.MainData.csproj|solutionrelative:tempestas.maindata\\data\\tempestasdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -72,9 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|d:\\programming projects\\tempestas\\api\\tempestas.api\\tempestas.api\\tempestas.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{6D63FE8B-B010-9EBC-334B-EB0F4B46A400}|Tempestas.API\\Tempestas.API.csproj|solutionrelative:tempestas.api\\tempestas.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
     }
   ],
@@ -89,7 +83,6 @@
           "Children": [
             {
               "$type": "Document",
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
               "DocumentIndex": 0,
               "Title": "PredictionController.cs",
@@ -203,8 +196,6 @@
               "RelativeToolTip": "Tempestas.Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
 =======
-=======
->>>>>>> Stashed changes
               "DocumentIndex": 4,
               "Title": "20260131132535_initial.cs",
               "DocumentMoniker": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131132535_initial.cs",
@@ -212,9 +203,6 @@
               "ToolTip": "D:\\Programming projects\\Tempestas\\API\\Tempestas.API\\Tempestas.MainData\\Migrations\\20260131132535_initial.cs",
               "RelativeToolTip": "Tempestas.MainData\\Migrations\\20260131132535_initial.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-31T13:25:35.689Z",
