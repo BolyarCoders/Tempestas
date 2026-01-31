@@ -70,13 +70,12 @@ const Index = () => {
           >
             <View style={indexStyles.logoWrapper}>
               <Image
-                source={require("../../assets/icons/logo.png")}
+                source={require("@/assets/icons/logo.png")}
                 style={indexStyles.logo}
                 resizeMode="contain"
               />
-              <View style={indexStyles.decorativeCircle} />
             </View>
-            <Text style={indexStyles.brandName}>ПромоМания</Text>
+            <Text style={indexStyles.brandName}>Tempestas</Text>
           </Animated.View>
 
           {/* Welcome text */}
@@ -89,12 +88,13 @@ const Index = () => {
               },
             ]}
           >
-            <Text style={indexStyles.welcomeText}>
-              Откривай. Сравнявай. Пести.
+            <Text style={indexStyles.subWelocomeText}>
+              Monitor. Predict. Stay Safe.
             </Text>
             <Text style={indexStyles.subText}>
-              Всички намаления на едно място.{"\n"}
-              Сравнявай цени. Спести повече.
+              Tempestas shows you real-time air quality, temperature, and
+              humidity.{"\n"}
+              Get alerts and advice to protect yourself from pollution.
             </Text>
 
             <Animated.View
@@ -103,9 +103,9 @@ const Index = () => {
                 { opacity: featuresFadeAnim },
               ]}
             >
-              <FeatureItem text="Оферти от всички големи магазини" />
-              <FeatureItem text="Мигновено сравнение на цени" />
-              <FeatureItem text="Проследяване на най-ниските цени" />
+              <FeatureItem text="Real-time air quality, temperature, and humidity" />
+              <FeatureItem text="Predictions for the next hours" />
+              <FeatureItem text="Notifications when to close your windows" />
             </Animated.View>
           </Animated.View>
 
@@ -120,17 +120,17 @@ const Index = () => {
             ]}
           >
             <TouchableOpacity
-              onPress={() => router.push("/")}
+              onPress={() => router.push("/onboarding")}
               activeOpacity={0.8}
               style={indexStyles.button}
             >
               <LinearGradient
-                colors={["rgba(46, 170, 134, 1)", "rgba(40, 150, 120, 1)"]}
+                colors={["#22D3EE", "#2563EB"]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 style={indexStyles.buttonGradient}
               >
-                <Text style={indexStyles.buttonText}>Започни сега</Text>
+                <Text style={indexStyles.buttonText}>Continiue</Text>
                 <Text style={indexStyles.buttonText}>-&gt;</Text>
               </LinearGradient>
             </TouchableOpacity>

@@ -27,7 +27,7 @@ export const indexStyles = StyleSheet.create({
   },
   loadingText: {
     fontSize: moderateScale(15),
-    color: "#666666",
+    color: "#F8FAFC",
     marginTop: 12,
     fontWeight: "500",
   },
@@ -57,52 +57,16 @@ export const indexStyles = StyleSheet.create({
         ? moderateScale(48)
         : moderateScale(38),
     fontWeight: "900",
-    color: "#1a1a1a",
+    color: "#F8FAFC",
     letterSpacing: isTablet ? 2 : 1,
-    textShadowColor: "rgba(46, 170, 134, 0.1)",
-    textShadowOffset: { width: 0, height: 2 },
-    textShadowRadius: 4,
   },
   logo: {
-    width: isSmallDevice
-      ? moderateScale(160)
-      : isTablet
-        ? moderateScale(240)
-        : moderateScale(200),
-    height: isSmallDevice
-      ? moderateScale(160)
-      : isTablet
-        ? moderateScale(240)
-        : moderateScale(200),
-    borderRadius: moderateScale(40),
-    shadowColor: "#2eaa86",
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 12,
+    width: moderateScale(180),
+    height: moderateScale(180),
     elevation: 10,
     zIndex: 3,
   },
-  decorativeCircle: {
-    position: "absolute",
-    width: isSmallDevice
-      ? moderateScale(190)
-      : isTablet
-        ? moderateScale(270)
-        : moderateScale(230),
-    height: isSmallDevice
-      ? moderateScale(190)
-      : isTablet
-        ? moderateScale(270)
-        : moderateScale(230),
-    borderRadius: 1000,
-    borderWidth: 2,
-    borderColor: "rgba(46, 170, 134, 0.2)",
-    borderStyle: "dashed",
-    zIndex: 2,
-  },
+
   textContainer: {
     alignItems: "center",
     gap: verticalScale(16),
@@ -117,22 +81,37 @@ export const indexStyles = StyleSheet.create({
         : moderateScale(30),
     fontWeight: "800",
     textAlign: "center",
-    color: "#1a1a1a",
+    color: "#F8FAFC",
     letterSpacing: -0.5,
     lineHeight: isSmallDevice
       ? moderateScale(34)
       : isTablet
         ? moderateScale(50)
         : moderateScale(42),
-    paddingHorizontal: scale(8),
+  },
+  subWelocomeText: {
+    fontSize: isSmallDevice
+      ? moderateScale(24)
+      : isTablet
+        ? moderateScale(38)
+        : moderateScale(20),
+    fontWeight: "800",
+    textAlign: "center",
+    color: "#F8FAFC",
+    letterSpacing: -0.5,
+    lineHeight: isSmallDevice
+      ? moderateScale(34)
+      : isTablet
+        ? moderateScale(50)
+        : moderateScale(42),
   },
   subText: {
     fontSize: isSmallDevice
-      ? moderateScale(13)
+      ? moderateScale(8)
       : isTablet
         ? moderateScale(17)
         : moderateScale(15),
-    color: "#555555",
+    color: "#F8FAFC",
     textAlign: "center",
     lineHeight: isSmallDevice ? 22 : isTablet ? 28 : 26,
     fontWeight: "400",
@@ -156,7 +135,7 @@ export const indexStyles = StyleSheet.create({
     width: scale(8),
     height: scale(8),
     borderRadius: scale(4),
-    backgroundColor: "rgba(46, 170, 134, 1)",
+    backgroundColor: "#2563EB",
     flexShrink: 0,
   },
   featureText: {
@@ -165,7 +144,7 @@ export const indexStyles = StyleSheet.create({
       : isTablet
         ? moderateScale(16)
         : moderateScale(14),
-    color: "#444444",
+    color: "#F8FAFC",
     fontWeight: "500",
     flex: 1,
     lineHeight: isSmallDevice ? 18 : isTablet ? 24 : 20,
@@ -181,13 +160,7 @@ export const indexStyles = StyleSheet.create({
     width: "100%",
     borderRadius: scale(16),
     overflow: "hidden",
-    shadowColor: "#2eaa86",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
+
     elevation: 8,
     borderWidth: 1,
     borderColor: "white",
