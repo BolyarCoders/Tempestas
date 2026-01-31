@@ -1,8 +1,8 @@
 <Solution>
+  <Folder Name="/Data/">
+    <Project Path="Tempestas.Data.Models/Tempestas.Data.Models.csproj" Id="e5fecb77-cc4c-4aa3-9b88-c13f333d601a" />
+    <Project Path="Tempestas.Data/Tempestas.Data.csproj" Id="ed267f11-013f-4d72-935b-60c2b0e46551" />
+  </Folder>
   <Project Path="Tempestas.API/Tempestas.API.csproj" />
-<<<<<<< Updated upstream
   <Project Path="Tempestas.Services.Core/Tempestas.Services.Core.csproj" Id="2ad85778-0efb-41e9-a3fb-b9e3e09753cf" />
-=======
-  <Project Path="Tempestas.MainData/Tempestas.MainData.csproj" Id="6c79c0bd-b093-4130-86df-3f06f8f3c766" />
->>>>>>> Stashed changes
 </Solution>
