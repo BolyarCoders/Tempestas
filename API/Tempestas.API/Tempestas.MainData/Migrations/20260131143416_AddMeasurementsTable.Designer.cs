@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Tempestas.MainData;
@@ -11,9 +12,11 @@ using Tempestas.MainData;
 namespace Tempestas.MainData.Migrations
 {
     [DbContext(typeof(TempestasDbContext))]
-    partial class TempestasDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260131143416_AddMeasurementsTable")]
+    partial class AddMeasurementsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,51 +84,6 @@ namespace Tempestas.MainData.Migrations
                     b.ToTable("Measurements");
                 });
 
-            modelBuilder.Entity("Tempestas.MainData.Models.Prediction", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
-                        .HasColumnName("id")
-                        .HasDefaultValueSql("gen_random_uuid()");
-
-                    b.Property<double>("AirQuality")
-                        .HasColumnType("double precision")
-                        .HasColumnName("air_quality");
-
-                    b.Property<double>("Confidence")
-                        .HasColumnType("double precision")
-                        .HasColumnName("confidence");
-
-                    b.Property<Guid>("DeviceId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("device_id");
-
-                    b.Property<DateTimeOffset>("GeneratedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamptz")
-                        .HasColumnName("generated_at")
-                        .HasDefaultValueSql("now()");
-
-                    b.Property<double>("Humidity")
-                        .HasColumnType("double precision")
-                        .HasColumnName("humidity");
-
-                    b.Property<DateTimeOffset>("PredictedFor")
-                        .HasColumnType("timestamptz")
-                        .HasColumnName("predicted_for");
-
-                    b.Property<double>("Temperature")
-                        .HasColumnType("double precision")
-                        .HasColumnName("temperature");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DeviceId", "PredictedFor");
-
-                    b.ToTable("Predictions");
-                });
-
             modelBuilder.Entity("Tempestas.MainData.Models.Measurement", b =>
                 {
                     b.HasOne("Tempestas.MainData.Models.Device", "Device")
@@ -137,22 +95,9 @@ namespace Tempestas.MainData.Migrations
                     b.Navigation("Device");
                 });
 
-            modelBuilder.Entity("Tempestas.MainData.Models.Prediction", b =>
-                {
-                    b.HasOne("Tempestas.MainData.Models.Device", "Device")
-                        .WithMany("Predictions")
-                        .HasForeignKey("DeviceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Device");
-                });
-
             modelBuilder.Entity("Tempestas.MainData.Models.Device", b =>
                 {
                     b.Navigation("Measurements");
-
-                    b.Navigation("Predictions");
                 });
 #pragma warning restore 612, 618
         }

@@ -20,5 +20,9 @@ namespace Tempestas.MainData.Models
         [Column("created_at", TypeName = "timestamptz")]
         [DefaultValue(typeof(DateTimeOffset), "")]
         public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+
+        // Navigation
+        public ICollection<Measurement> Measurements { get; set; } = new List<Measurement>();
+        public ICollection<Prediction> Predictions { get; set; } = new List<Prediction>();
     }
 }
