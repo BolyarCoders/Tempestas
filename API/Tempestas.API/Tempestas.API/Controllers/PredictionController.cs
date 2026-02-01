@@ -5,6 +5,8 @@ using Tempestas.Services.Core.Interfaces;
 
 namespace Tempestas.API.Controllers
 {
+    [Controller]
+    [Route("api/predictions")]
     public class PredictionController : Controller, IPredictionController
     {
         private readonly IPredictionService _predictionService;
@@ -13,6 +15,7 @@ namespace Tempestas.API.Controllers
             _predictionService = predictionService;
         }
 
+        [HttpGet("{deviceId}")]
         public async Task<IActionResult> GetPredictionForDeviceAsync(string deviceId)
         {
             try
