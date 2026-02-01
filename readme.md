@@ -57,6 +57,30 @@ The PostgreSQL database contains the following core entities:
 | **Predictions**      | AI-generated predictions and confidence scores.                        |
 | **Models**           | Metadata about ML models (version, type, training date).               |
 
+
+# Hardware Architecture
+
+The hardware layer is responsible for real-time environmental data acquisition and reliable transmission to the backend services. It is built around low-cost, widely supported IoT components to ensure scalability and ease of deployment.
+
+## Core Components
+
+| Component | Description |
+|---------|-------------|
+| **ESP32** | Primary microcontroller responsible for sensor polling, local preprocessing, and network communication. |
+| **MQ-135** | Gas sensor used to measure air quality (VOC, CO₂-equivalent, NH₃, NOx). |
+| **DHT11** | Digital sensor for ambient temperature and humidity readings. |
+
+---
+
+## System Design
+
+- The **ESP32** acts as the edge device, reading sensor values at fixed intervals.
+- **MQ-135** provides analog air quality measurements via the ESP32 ADC.
+- **DHT11** provides calibrated digital temperature and humidity data over a single-wire protocol.
+- Sensor readings are timestamped locally or server-side and serialized into JSON.
+- Data is transmitted securely over **Wi-Fi** to the backend API.
+
+
 # Getting Started
 
 ## Prerequisites
@@ -73,6 +97,6 @@ The PostgreSQL database contains the following core entities:
 
 ### Clone the repository
 ```bash
-git clone https://github.com/your-org/your-project.git
-cd your-project 
+git clone https://github.com/BolyarCoders/Tempestas.git
+cd Tempestas
 ```

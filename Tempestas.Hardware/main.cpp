@@ -11,8 +11,8 @@
 #define DHTPIN 4
 #define DHTTYPE DHT11
 
-const char* ssid = "TP-Link_C5EA";
-const char* password = "30930889";
+const char* ssid = "*****";
+const char* password = "******";
 const char* apiUrl = "https://tempestas-16da.onrender.com/api/measurements";
 const char* deviceId = "21c22fce-d945-48cc-a5cd-4a0b4897d160"; // constant
 
