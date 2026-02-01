@@ -8,6 +8,6 @@ namespace Tempestas.Services.Core.Interfaces
 {
     public interface IPredictionService
     {
-        public Task<PredictionResponse?> GetPredictionForDeviceAsync(string deviceId);
+        public Task<PredictionResponse?> GetPredictionForDeviceAsync(Guid deviceId);
     }
 }

@@ -16,53 +16,47 @@ namespace Tempestas.Services.Core.Services
         private readonly TempestasDbContext _context;
         private readonly HttpClient _httpClient;
         private readonly string _baseUrl = "https://tempestas-ai.onrender.com";
-        public PredictionService(TempestasDbContext context)
-        {
-            _httpClient = new HttpClient();
-            _context = context;
-        }
 
         public PredictionService(TempestasDbContext context, HttpClient httpClient)
         {
-            _httpClient = httpClient;
-            _context = context;
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        public async Task<PredictionResponse?> GetPredictionForDeviceAsync(string deviceId)
+
+        public async Task<PredictionResponse?> GetPredictionForDeviceAsync(Guid deviceId)
         {
-            try
-            {
-                List<Record> deviceRecords = await _context.Measurements
-                    .Where(m => m.DeviceId.ToString() == deviceId)
-                    .OrderByDescending(m => m.MeasuredAt)
-                    .Take(50)
-                    .Select(m => new Record
-                    {
-                        Temperature = m.Temperature,
-                        Humidity = m.Humidity,
-                        AirQuality = m.AirQuality,
-                        Timestamp = m.MeasuredAt
-                    })
-                    .ToListAsync();
-
-
-                DeviceData request = new DeviceData
+            List<Record> deviceRecords = await _context.Measurements
+                .Where(m => m.DeviceId == deviceId)
+                .OrderByDescending(m => m.MeasuredAt)
+                .Take(50)
+                .Select(m => new Record
                 {
-                    DeviceId = deviceId,
-                    Records = deviceRecords
-                };
-                string jsonContent = JsonConvert.SerializeObject(request);
-                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+                    Temperature = m.Temperature,
+                    Humidity = m.Humidity,
+                    AirQuality = m.AirQuality,
+                    Timestamp = m.MeasuredAt
+                })
+                .ToListAsync();
 
-                var response = await _httpClient.PostAsync($"{_baseUrl}/predict", content);
-                response.EnsureSuccessStatusCode();
-
-                string responseBody = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<PredictionResponse>(responseBody);
-            }
-            catch (Exception ex)
+            if (deviceRecords.Count == 0)
             {
-                throw new ApplicationException("An error occurred while getting the prediction for the device.", ex);
+                return null;
             }
+
+            DeviceData request = new DeviceData
+            {
+                DeviceId = deviceId.ToString(),
+                Records = deviceRecords
+            };
+
+            string jsonContent = JsonConvert.SerializeObject(request);
+            var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync($"{_baseUrl}/predict", content);
+            response.EnsureSuccessStatusCode();
+
+            string responseBody = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<PredictionResponse>(responseBody);
         }
     }
 }

@@ -254,3 +254,4 @@ C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.API\obj\De
 C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.API\obj\Debug\net10.0\Tempestas.API.pdb
 C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.API\obj\Debug\net10.0\Tempestas.API.genruntimeconfig.cache
 C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.API\obj\Debug\net10.0\ref\Tempestas.API.dll
+C:\Users\merte\Documents\GitHub\Tempestas\API\Tempestas.API\Tempestas.API\bin\Debug\net10.0\System.Web.Cors.dll

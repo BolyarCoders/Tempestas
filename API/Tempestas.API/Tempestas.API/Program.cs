@@ -33,7 +33,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddScoped<IMeasurementService, MeasurementService>();
 builder.Services.AddScoped<IDeviceService, DeviceService>();
-builder.Services.AddScoped<IPredictionService, PredictionService>();
+builder.Services.AddHttpClient<IPredictionService, PredictionService>(); 
+
 
 var app = builder.Build();
 
