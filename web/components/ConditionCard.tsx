@@ -1,4 +1,4 @@
-import { HealthCondition } from '@/lib/mockData';
+import { HealthCondition } from "@/lib/mockData";
 import {
   IoFitnessOutline,
   IoFlowerOutline,
@@ -7,25 +7,25 @@ import {
   IoMedkitOutline,
   IoPeopleOutline,
   IoAccessibilityOutline,
-} from 'react-icons/io5'; // Importing icons manually for now or mapping them
-import clsx from 'clsx';
+} from "react-icons/io5"; // Importing icons manually for now or mapping them
+import clsx from "clsx";
 
 // Helper to map icon string to React Icon component
 const getIcon = (iconName: string) => {
   switch (iconName) {
-    case 'fitness-outline':
+    case "fitness-outline":
       return <IoFitnessOutline size={24} />;
-    case 'flower-outline':
+    case "flower-outline":
       return <IoFlowerOutline size={24} />;
-    case 'pulse-outline':
+    case "pulse-outline":
       return <IoPulseOutline size={24} />;
-    case 'heart-outline':
+    case "heart-outline":
       return <IoHeartOutline size={24} />;
-    case 'medkit-outline':
+    case "medkit-outline":
       return <IoMedkitOutline size={24} />;
-    case 'people-outline':
+    case "people-outline":
       return <IoPeopleOutline size={24} />;
-    case 'accessibility-outline':
+    case "accessibility-outline":
       return <IoAccessibilityOutline size={24} />;
     default:
       return <IoFitnessOutline size={24} />;
@@ -47,17 +47,17 @@ export const ConditionCard: React.FC<ConditionCardProps> = ({
     <div
       onClick={() => onToggle(condition.id)}
       className={clsx(
-        'bg-card group hover:border-primary/50 relative flex cursor-pointer items-center justify-between rounded-2xl border-2 p-4 transition-all duration-200',
-        isSelected ? 'border-primary bg-card' : 'bg-card border-white/5',
+        "bg-card group hover:border-primary/50 relative flex cursor-pointer items-center justify-between rounded-2xl border-2 p-4 transition-all duration-200 shadow-md hover:shadow-xl",
+        isSelected ? "border-primary bg-card" : "bg-card border-white/5",
       )}
     >
       <div className="flex flex-1 items-center gap-3">
         <div
           className={clsx(
-            'flex h-12 w-12 items-center justify-center rounded-xl transition-colors',
+            "flex h-12 w-12 items-center justify-center rounded-xl transition-colors",
             isSelected
-              ? 'bg-primary/20 text-primary'
-              : 'bg-text-secondary/10 text-text-secondary group-hover:text-primary/70',
+              ? "bg-primary/20 text-primary"
+              : "bg-text-secondary/10 text-text-secondary group-hover:text-primary/70",
           )}
         >
           {getIcon(condition.icon)}
