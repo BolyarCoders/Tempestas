@@ -32,12 +32,14 @@ builder.Services.AddCors(options =>
     });
 });
 
+
+
 builder.Services.AddScoped<IMeasurementService, MeasurementService>();
 builder.Services.AddScoped<IDeviceService, DeviceService>();
 builder.Services.AddScoped<IPredictionService, PredictionService>();
 
 var app = builder.Build();
-
+app.UseCors("AllowSpecificOrigin");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
