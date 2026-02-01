@@ -7,7 +7,7 @@ namespace Tempestas.API.Controllers
 {
     [Controller]
     [Route("api/[controller]")]
-    //[EnableCors("AllowAll")]
+    [EnableCors("AllowAll")]
     public class DeviceController : Controller, IControllers.IDeviceController
     {
         private readonly IDeviceService _deviceService;  
