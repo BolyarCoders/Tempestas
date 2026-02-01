@@ -3,7 +3,6 @@
 *.vsidx
 *.cache
 *.editorconfig
-*.json
 *.cache
 *.props
 *.editorconfig
