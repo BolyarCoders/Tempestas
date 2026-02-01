@@ -8,7 +8,7 @@ namespace Tempestas.API.Controllers
 {
     [ApiController]
     [Route("api/measurements")]
-    [EnableCors("AllowAll")]// "api/measurements" (explicit and plural)
+    //[EnableCors("AllowAll")]// "api/measurements" (explicit and plural)
     public class MeasurementController : ControllerBase, IMeasurementController
     {
         private readonly IMeasurementService _measurementService;

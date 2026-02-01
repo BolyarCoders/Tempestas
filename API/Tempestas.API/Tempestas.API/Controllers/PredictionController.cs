@@ -8,7 +8,7 @@ namespace Tempestas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [EnableCors("AllowAll")]
+    //[EnableCors("AllowAll")]
     public class PredictionController : Controller, IPredictionController
     {
         private readonly IPredictionService _predictionService;
