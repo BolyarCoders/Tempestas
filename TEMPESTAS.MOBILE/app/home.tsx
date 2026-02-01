@@ -13,6 +13,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { useDevicePredictions } from "../hooks/useAIPrediction";
 import { useDeviceMeasurements } from "../hooks/useDeviceMesurments";
 
 const { width } = Dimensions.get("window");
@@ -74,6 +75,12 @@ const HomeScreen: React.FC = () => {
   const router = useRouter();
   const { getMeasurementByDeviceId, measurement, loading, error } =
     useDeviceMeasurements();
+  const {
+    getPredictionByDeviceId,
+    prediction,
+    loading: predictionLoading,
+    error: predictionError,
+  } = useDevicePredictions();
 
   // State for current data
   const [currentAQI, setCurrentAQI] = useState(45);
@@ -92,15 +99,11 @@ const HomeScreen: React.FC = () => {
 
   // Mock historical data for trends
   const hourlyData = [32, 35, 38, 42, 45, 48, 52, 55];
-  const predictions = [
-    { time: "2 PM", aqi: 58, level: "Moderate" },
-    { time: "4 PM", aqi: 72, level: "Moderate" },
-    { time: "6 PM", aqi: 85, level: "Moderate" },
-  ];
 
   // Fetch measurement data on component mount
   useEffect(() => {
     loadMeasurement();
+    loadPrediction();
   }, []);
 
   // Update state when measurement data is fetched
@@ -123,10 +126,38 @@ const HomeScreen: React.FC = () => {
     }
   };
 
+  const loadPrediction = async () => {
+    try {
+      console.log("🔄 Loading latest prediction for device...");
+      await getPredictionByDeviceId(DEVICE_ID);
+    } catch (err) {
+      console.error("❌ Failed to load prediction:", err);
+      // Keep using mock data if API fails
+    }
+  };
+
   const onRefresh = async () => {
     setRefreshing(true);
-    await loadMeasurement();
+    await Promise.all([loadMeasurement(), loadPrediction()]);
     setRefreshing(false);
+  };
+
+  // Format prediction time
+  const formatPredictionTime = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+    });
+  };
+
+  // Get prediction status
+  const getPredictionStatus = (aqi: number) => {
+    const status = getAQIStatus(aqi);
+    return {
+      level: status.label,
+      color: status.color,
+    };
   };
 
   return (
@@ -346,36 +377,77 @@ const HomeScreen: React.FC = () => {
           </Text>
         </View>
 
-        {predictions.map((prediction, index) => (
-          <View key={index} style={styles.predictionCard}>
+        {/* Prediction Loading State */}
+        {predictionLoading && !prediction && (
+          <View style={styles.predictionLoadingContainer}>
+            <ActivityIndicator size="small" color={COLORS.accent} />
+            <Text style={styles.loadingText}>Loading predictions...</Text>
+          </View>
+        )}
+
+        {/* Prediction Error State */}
+        {predictionError && !prediction && (
+          <View style={styles.predictionErrorContainer}>
+            <Ionicons
+              name="alert-circle-outline"
+              size={24}
+              color={COLORS.statusDanger}
+            />
+            <Text style={styles.predictionErrorText}>{predictionError}</Text>
+          </View>
+        )}
+
+        {/* Display Prediction */}
+        {prediction && (
+          <View style={styles.predictionCard}>
             <View style={styles.predictionTime}>
               <Ionicons
                 name="time-outline"
                 size={20}
                 color={COLORS.textSecondary}
               />
-              <Text style={styles.predictionTimeText}>{prediction.time}</Text>
+              <Text style={styles.predictionTimeText}>
+                {formatPredictionTime(prediction.predictedFor)}
+              </Text>
             </View>
             <View style={styles.predictionDetails}>
-              <Text style={styles.predictionAQI}>AQI {prediction.aqi}</Text>
+              <Text style={styles.predictionAQI}>
+                AQI {prediction.airQuality}
+              </Text>
               <View
                 style={[
                   styles.predictionBadge,
-                  { backgroundColor: COLORS.statusModerate + "30" },
+                  {
+                    backgroundColor:
+                      getPredictionStatus(prediction.airQuality).color + "30",
+                  },
                 ]}
               >
                 <Text
                   style={[
                     styles.predictionLevel,
-                    { color: COLORS.statusModerate },
+                    {
+                      color: getPredictionStatus(prediction.airQuality).color,
+                    },
                   ]}
                 >
-                  {prediction.level}
+                  {getPredictionStatus(prediction.airQuality).level}
                 </Text>
               </View>
             </View>
+            {/* Confidence Indicator */}
+            <View style={styles.confidenceContainer}>
+              <Ionicons
+                name="analytics-outline"
+                size={14}
+                color={COLORS.textSecondary}
+              />
+              <Text style={styles.confidenceText}>
+                {(prediction.confidence * 100).toFixed(0)}% confidence
+              </Text>
+            </View>
           </View>
-        ))}
+        )}
 
         {/* Alert Card */}
         <View style={styles.alertCard}>
@@ -646,20 +718,46 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     marginTop: 8,
   },
-  predictionCard: {
+  predictionLoadingContainer: {
+    backgroundColor: COLORS.card,
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 12,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 12,
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.05)",
+  },
+  predictionErrorContainer: {
     backgroundColor: COLORS.card,
     borderRadius: 12,
     padding: 16,
     marginBottom: 12,
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
+    gap: 12,
+    borderWidth: 1,
+    borderColor: "rgba(239, 68, 68, 0.2)",
+  },
+  predictionErrorText: {
+    fontSize: 14,
+    color: COLORS.statusDanger,
+    flex: 1,
+  },
+  predictionCard: {
+    backgroundColor: COLORS.card,
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.05)",
   },
   predictionTime: {
     flexDirection: "row",
     alignItems: "center",
+    marginBottom: 12,
   },
   predictionTimeText: {
     fontSize: 16,
@@ -670,7 +768,8 @@ const styles = StyleSheet.create({
   predictionDetails: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
+    justifyContent: "space-between",
+    marginBottom: 12,
   },
   predictionAQI: {
     fontSize: 16,
@@ -685,6 +784,15 @@ const styles = StyleSheet.create({
   predictionLevel: {
     fontSize: 12,
     fontWeight: "700",
+  },
+  confidenceContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+  confidenceText: {
+    fontSize: 12,
+    color: COLORS.textSecondary,
   },
   alertCard: {
     backgroundColor: COLORS.card,
