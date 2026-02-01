@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Tempestas.API.Controllers.IControllers;
 using Tempestas.MainData.AiCommunicationModels;
 using Tempestas.Services.Core.Interfaces;
@@ -7,6 +8,7 @@ namespace Tempestas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("AllowAll")]
     public class PredictionController : Controller, IPredictionController
     {
         private readonly IPredictionService _predictionService;

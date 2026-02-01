@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Tempestas.API.Controllers.IControllers;
 using Tempestas.MainData.Models;
 using Tempestas.Services.Core.Interfaces;
@@ -6,7 +7,8 @@ using Tempestas.Services.Core.Interfaces;
 namespace Tempestas.API.Controllers
 {
     [ApiController]
-    [Route("api/measurements")]  // "api/measurements" (explicit and plural)
+    [Route("api/measurements")]
+    [EnableCors("AllowAll")]// "api/measurements" (explicit and plural)
     public class MeasurementController : ControllerBase, IMeasurementController
     {
         private readonly IMeasurementService _measurementService;

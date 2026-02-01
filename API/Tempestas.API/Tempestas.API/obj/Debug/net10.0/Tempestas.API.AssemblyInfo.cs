@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tempestas.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42633bb6c62c7911e99fe9e11e7270a017487272")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+350f8c57c476d5312c57f7e3c0935a637cf7f232")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tempestas.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tempestas.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

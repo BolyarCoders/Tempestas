@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Tempestas.MainData.Models;
 using Tempestas.Services.Core.Interfaces;
 
 namespace Tempestas.API.Controllers
 {
+    [Controller]
     [Route("api/[controller]")]
+    [EnableCors("AllowAll")]
     public class DeviceController : Controller, IControllers.IDeviceController
     {
         private readonly IDeviceService _deviceService;  
